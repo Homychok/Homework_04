@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         lessonwork1();
@@ -126,9 +128,11 @@ public class Main {
             sum += arr[index];
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
+        Arrays.sort(arr);
+        String str = Arrays.toString(arr);
         int maxNum = arr[arr.length - 1];
+        int minNum = arr[0];
         System.out.println("Maximum number = " + maxNum);
-        int minNum = arr[arr.length - 1];
         System.out.println("Minimum number = " + minNum);
         double total = sum / 30;
         System.out.println("Средняя сумма трат за месяц составила " + total + " рублей");
